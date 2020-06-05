@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://MCU-UAV.github.io</id>
     <title>破晓</title>
-    <updated>2020-06-05T02:46:02.519Z</updated>
+    <updated>2020-06-05T05:24:09.918Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://MCU-UAV.github.io"/>
     <link rel="self" href="https://MCU-UAV.github.io/atom.xml"/>
@@ -10,4 +10,13 @@
     <logo>https://MCU-UAV.github.io/images/avatar.png</logo>
     <icon>https://MCU-UAV.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 破晓</rights>
+    <entry>
+        <title type="html"><![CDATA[第一篇测试文章]]></title>
+        <id>https://MCU-UAV.github.io/1e4ZsTYAQ/</id>
+        <link href="https://MCU-UAV.github.io/1e4ZsTYAQ/">
+        </link>
+        <updated>2020-06-05T05:23:45.000Z</updated>
+        <content type="html"><![CDATA[<p>TEST...</p>
+]]></content>
+    </entry>
 </feed>
