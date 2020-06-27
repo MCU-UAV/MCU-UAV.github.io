@@ -1,24 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://MCU-UAV.github.io</id>
-    <title>破晓</title>
-    <updated>2020-06-27T07:29:25.254Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://MCU-UAV.github.io"/>
-    <link rel="self" href="https://MCU-UAV.github.io/atom.xml"/>
-    <subtitle>破而后立，晓喻新生。</subtitle>
-    <logo>https://MCU-UAV.github.io/images/avatar.png</logo>
-    <icon>https://MCU-UAV.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 破晓</rights>
-    <entry>
-        <title type="html"><![CDATA[利用DAC控制XL4015电压可调]]></title>
-        <id>https://MCU-UAV.github.io/jBxZDTKaB/</id>
-        <link href="https://MCU-UAV.github.io/jBxZDTKaB/">
-        </link>
-        <updated>2020-06-27T04:45:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>XL4015是一个180khz的定频PWM buck（降压）DC/DC变换器，能够驱动5A负载，具有高效率、低纹波、良好的线和负载调节能力。本文将设计XL4015外围电路并计算外部元件的参数，实现单片机对电源电压的控制。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>XL4015是一个180khz的定频PWM buck（降压）DC/DC变换器，能够驱动5A负载，具有高效率、低纹波、良好的线和负载调节能力。本文将设计XL4015外围电路并计算外部元件的参数，实现单片机对电源电压的控制。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>利用DAC控制XL4015电压可调 | 破晓</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://MCU-UAV.github.io/favicon.ico?v=1593242949572">
+<link rel="stylesheet" href="https://MCU-UAV.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="XL4015是一个180khz的定频PWM buck（降压）DC/DC变换器，能够驱动5A负载，具有高效率、低纹波、良好的线和负载调节能力。本文将设计XL4015外围电路并计算外部元件的参数，实现单片机对电源电压的控制。
+
+XL4015手册..." />
+    <meta name="keywords" content="可调降压" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://MCU-UAV.github.io">
+        <img src="https://MCU-UAV.github.io/images/avatar.png?v=1593242949572" class="site-logo">
+        <h1 class="site-title">破晓</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://MCU-UAV.github.io/oM-1jWqBi" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      破而后立，晓喻新生。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">破晓</a> | <a class="rss" href="https://MCU-UAV.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">利用DAC控制XL4015电压可调</h2>
+            <div class="post-date">2020-06-27</div>
+            
+              <div class="feature-container" style="background-image: url('https://MCU-UAV.github.io/post-images/jBxZDTKaB.jfif')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>XL4015是一个180khz的定频PWM buck（降压）DC/DC变换器，能够驱动5A负载，具有高效率、低纹波、良好的线和负载调节能力。本文将设计XL4015外围电路并计算外部元件的参数，实现单片机对电源电压的控制。</p>
 <!-- more -->
 <p>XL4015手册中给出了输出5V定压的典型电路图：<br>
 <img src="https://MCU-UAV.github.io/post-images/1593235392891.png" alt="" loading="lazy"><br>
@@ -67,15 +154,88 @@
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>G</mi></mrow></msub><mo>=</mo><mn>8.89</mn><mi>V</mi></mrow><annotation encoding="application/x-tex">V_{maxG}=8.89V
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span><span class="mord mathdefault mtight">G</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">.</span><span class="mord">8</span><span class="mord">9</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span></span></p>
 <p>同时由式(7)可知，此时当<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>O</mi><mi>U</mi><mi>T</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">V_{OUT}=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">O</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">U</span><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>时，单片机DAC控制电压为2.94V，满足设计需要。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第一篇测试文章]]></title>
-        <id>https://MCU-UAV.github.io/1e4ZsTYAQ/</id>
-        <link href="https://MCU-UAV.github.io/1e4ZsTYAQ/">
-        </link>
-        <updated>2020-06-05T05:23:45.000Z</updated>
-        <content type="html"><![CDATA[<p>TEST...</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://MCU-UAV.github.io/wyIKzzFJE/" class="tag">
+                    可调降压
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://MCU-UAV.github.io/1e4ZsTYAQ/">
+                  <h3 class="post-title">
+                    第一篇测试文章
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '9e354a27e919f5827020',
+        clientSecret: 'baf5e0d075c524f6057d9f702f73896569430de4',
+        repo: 'MCU-UAV.github.io',
+        owner: 'MCU-UAV',
+        admin: ['MCU-UAV'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
