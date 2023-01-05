@@ -12,7 +12,6 @@
   image: assets/images/02 beijing_2023_faculty_yiyan.png
   bold:
   - book
-  bio:  |
-    "Yiyan Zhang 张伊妍 is a book"
+  bio:  Yiyan Zhang 张伊妍 is a book
   website: https://yiyanzhang.com/
   
