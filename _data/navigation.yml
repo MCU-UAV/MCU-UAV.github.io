@@ -1,0 +1,15 @@
+- name: Home
+  url: "/"
+- name: Locations
+  url: "/locations"
+- name: Learn Online
+  url: "/overview"
+- name: People
+  url: "/people"
+- name: Festival
+  url: "/festival"
+- name: About
+  url: "/about"
+- name: Apply
+  type: "button"
+  url: "/apply"
