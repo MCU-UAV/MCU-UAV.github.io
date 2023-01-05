@@ -10,8 +10,6 @@
   
 - name: "Yiyan Zhang"
   image: assets/images/02 beijing_2023_faculty_yiyan.png
-  bold:
-  - book
-  bio:  Yiyan Zhang 张伊妍 *is a book*
+  bio:  <div>Yiyan Zhang 张伊妍 *is a book*</div>
   website: https://yiyanzhang.com/
   
